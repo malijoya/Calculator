@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="lightBlue">#2177fe</color>
+    <color name="cream">#CECFD0</color>
+    <color name="grey">#929292</color>
+
+    <!-- Light mode (default) theme colors -->
+    <color name="appBackground">#FFFFFFFF</color>
+    <color name="gridBackground">#F3F3F3</color>
+    <color name="digitText">#FF000000</color>
+    <color name="displayText">#FF000000</color>
+    <color name="resultText">#666666</color>
+    <color name="historyTint">#FF000000</color>
+
+    <!-- Press overlay for light mode: subtle dark circle -->
+    <color name="pressOverlay">#22000000</color>
+</resources>

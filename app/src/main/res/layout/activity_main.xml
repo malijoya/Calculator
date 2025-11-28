@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackground">
+
+    <!--Top Section (Display + History Button) -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topSection"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- History Button -->
+        <ImageButton
+            android:id="@+id/historyBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/history"
+            android:src="@drawable/ic_history"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/historyTint" />
+
+
+        <!-- Display Text -->
+        <EditText
+            android:id="@+id/tvDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="@android:color/transparent"
+            android:gravity="end"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text=""
+            android:textAlignment="viewEnd"
+            android:textColor="@color/displayText"
+            android:textColorHighlight="@color/lightBlue"
+            android:textCursorDrawable="@drawable/blue_cursor"
+            android:textSelectHandle="@drawable/blue_handle"
+            android:textSelectHandleLeft="@drawable/blue_handle_left"
+            android:textSelectHandleRight="@drawable/blue_handle_right"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toTopOf="@+id/tvResult"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:ellipsize="none"
+            android:focusable="false"
+            android:gravity="end"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text=""
+            android:textAlignment="viewEnd"
+            android:textColor="@color/resultText"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 🔢 Bottom Section (Calculator Buttons) -->
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alignmentMode="alignMargins"
+        android:background="@color/gridBackground"
+        android:columnCount="4"
+        android:padding="8dp"
+        android:rowCount="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topSection">
+
+        <!-- Buttons -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/clearBtn"
+            style="@style/CalcButton"
+            android:background="@drawable/calc_btn_bg"
+            android:text="@string/clear_button"
+            android:textColor="@color/lightBlue"
+            android:textSize="26sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/divideBtn"
+            style="@style/CalcButton"
+            android:background="@drawable/calc_btn_bg"
+            android:text="@string/divide"
+            android:textColor="@color/lightBlue"
+            android:textSize="34sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/multiplyBtn"
+            style="@style/CalcButton"
+            android:background="@drawable/calc_btn_bg"
+            android:text="@string/multiply"
+            android:textColor="@color/lightBlue"
+            android:textSize="34sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/backBtn"
+            style="@style/CalcButton"
+            android:background="@drawable/calc_btn_bg"
+            android:text="@string/backspace"
+            android:textColor="@color/lightBlue"
+            android:textSize="26sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn7"
+            style="@style/CalcButton"
+            android:background="@drawable/calc_btn_bg"
+            android:text="@string/seven"
+            android:textColor="@color/digitText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn8"
+            style="@style/CalcButton"
+            android:background="@drawable/calc_btn_bg"
+            android:text="@string/eight"
+            android:textColor="@color/digitText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn9"
+            style="@style/CalcButton"
+            android:background="@drawable/calc_btn_bg"
+            android:text="@string/nine"
+            android:textColor="@color/digitText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/minusBtn"
+            style="@style/CalcButton"
+            android:background="@drawable/calc_btn_bg"
+            android:text="@string/minus"
+            android:textColor="@color/lightBlue"
+            android:textSize="30sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn4"
+            style="@style/CalcButton"
+            android:background="@drawable/calc_btn_bg"
+            android:text="@string/four"
+            android:textColor="@color/digitText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn5"
+            style="@style/CalcButton"
+            android:background="@drawable/calc_btn_bg"
+            android:text="@string/five"
+            android:textColor="@color/digitText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn6"
+            style="@style/CalcButton"
+            android:background="@drawable/calc_btn_bg"
+            android:text="@string/six"
+            android:textColor="@color/digitText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/plusBtn"
+            style="@style/CalcButton"
+            android:background="@drawable/calc_btn_bg"
+            android:text="@string/plus"
+            android:textColor="@color/lightBlue"
+            android:textSize="34sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn1"
+            style="@style/CalcButton"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:background="@drawable/calc_btn_bg"
+            android:text="@string/one"
+            android:textColor="@color/digitText" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn2"
+            style="@style/CalcButton"
+            android:background="@drawable/calc_btn_bg"
+            android:text="@string/two"
+            android:textColor="@color/digitText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn3"
+            style="@style/CalcButton"
+            android:background="@drawable/calc_btn_bg"
+            android:text="@string/three"
+            android:textColor="@color/digitText" />
+
+        <!-- New Equal Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/equalBtn"
+            style="@style/CalcButton"
+            android:layout_row="3"
+            android:layout_rowSpan="2"
+            android:layout_column="3"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/equal_btn_corner"
+            android:text="@string/equalSign"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/percentageBtn"
+            style="@style/CalcButton"
+            android:background="@drawable/calc_btn_bg"
+            android:text="@string/percent"
+            android:textColor="@color/digitText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn0"
+            style="@style/CalcButton"
+            android:background="@drawable/calc_btn_bg"
+            android:text="@string/zero"
+            android:textColor="@color/digitText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDot"
+            style="@style/CalcButton"
+            android:background="@drawable/calc_btn_bg"
+            android:text="@string/dot"
+            android:textColor="@color/digitText" />
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

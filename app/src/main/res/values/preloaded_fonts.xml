@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/adamina</item>
+        <item>@font/aldrich</item>
+        <item>@font/anek_malayalam_thin</item>
+        <item>@font/baloo_2</item>
+        <item>@font/baloo_bhai</item>
+        <item>@font/baloo_paaji_2</item>
+        <item>@font/belanosima</item>
+        <item>@font/cairo_light</item>
+        <item>@font/carme</item>
+        <item>@font/carrois_gothic_sc</item>
+        <item>@font/golos_text</item>
+        <item>@font/hind_guntur_light</item>
+        <item>@font/oleo_script</item>
+    </array>
+</resources>
