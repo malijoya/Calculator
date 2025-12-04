@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/appBackground">
+
+    <!-- Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/appBackground"
+        android:elevation="0dp"
+        app:titleTextColor="@color/displayText"
+        app:navigationIconTint="@color/displayText" />
+
+    <!-- Divider below toolbar -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"/>
+
+    <!-- Content Container -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- RecyclerView for history items -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/historyRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="4dp"
+            android:clipToPadding="false"
+            android:overScrollMode="ifContentScrolls"/>
+
+        <!-- Empty state message -->
+        <TextView
+            android:id="@+id/emptyHistoryText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/no_history_yet"
+            android:textColor="@color/resultText"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:padding="24dp"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+    <!-- Divider above Clear All button -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"/>
+
+    <!-- Clear All Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/clearAllBtn"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_margin="6dp"
+        android:fontFamily="serif"
+        android:text="@string/clear_all"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:cornerRadius="14dp"
+        app:backgroundTint="@color/clearButtonColor"
+        app:elevation="6dp" />
+
+</LinearLayout>

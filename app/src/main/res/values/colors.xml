@@ -13,6 +13,8 @@
     <color name="displayText">#FF000000</color>
     <color name="resultText">#666666</color>
     <color name="historyTint">#FF000000</color>
+    <color name="clearButtonColor">#999797</color>
+
 
     <!-- Press overlay for light mode: subtle dark circle -->
     <color name="pressOverlay">#22000000</color>

@@ -15,5 +15,7 @@
     <color name="historyTint">#C8C7C7</color>
     <!-- Press overlay for dark mode: subtle light circle -->
     <color name="pressOverlay">#18FFFFFF</color>
+    <color name="clearButtonColor">#4E4E4E</color> <!-- Light Gray -->
+
 </resources>
 

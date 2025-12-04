@@ -28,4 +28,5 @@
     <string name="clear_history_title">Clear History?</string>
     <string name="clear_history_message">This will delete all %1$d calculation%2$s.</string>
     <string name="cancel">Cancel</string>
+    <string name="clear_all">Clear All</string>
 </resources>
